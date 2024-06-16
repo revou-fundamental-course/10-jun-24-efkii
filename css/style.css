@@ -1,0 +1,25 @@
+body{
+ box-sizing: border-box;
+ min-width: 200px;
+ max-width: 980px;
+ margin: 0;
+ padding: 45px;  
+ background: linear-gradient(to right, #3494e6, #ec6ead ); 
+
+}
+.subject-info {
+    font-size: 24px;
+    font-style: italic;
+    font-family: math;
+}
+
+
+textarea {
+    resize: none;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 31px;
+    font-family: math;
+}

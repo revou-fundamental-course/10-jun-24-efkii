@@ -18,13 +18,13 @@
         <h1>Temperature Converter</h1>
     </header>
 
-    <hr>
+    <hr class="new1">
 
     <!-- Main Content -->
 
     <main class="container">
 
-        <p style="font-size: 17px;">On this website you can convert from Celsius(&deg;C) to Fanrenheit(&deg;F) and vice versa, Enter the temperature in degrees below, then click the convert button to get the conversion results. </p>
+        <p style="font-size: 20px;">On this website you can convert from Celsius(&deg;C) to Fanrenheit(&deg;F) and vice versa, Enter the temperature in degrees below, then click the convert button to get the conversion results. </p>
 
         <!-- Section Temperatuere Input -->
         <section class="Temperatuere Input">
@@ -42,10 +42,14 @@
     
                 <label for="conversion-type"> Selection Conversion:</label>
                 <br/>
-                <select id="conversion-type">
-                    <option value="celcius-to-fahrenheit">Celcius to Fahrenheit</option>
-                    <option value="fahrenheit-to-celicus">Fahrenheit to Celcius</option>
-                 </select>
+                <label class="select">
+                    <select>
+                        <option value="temperature-select">Temperatuere Select</option>
+                        <option value="celcius-to-fahrenheit">Celcius to Fahrenheit</option>
+                        <option value="fahrenheit-to-celicus">Fahrenheit to Celcius</option>
+                     </select>
+                </label>
+                
     
                  <!-- Button Temperature Converter -->
     
@@ -65,7 +69,7 @@
 
         <!-- Section Results Conversion -->
 
-        <section class="results conversion">
+        <section class="temperature output">
             <label for="temperature-output"> Temperature output:</label>
             <br/>
             <textarea type="text" id="temperature-output" readonly></textarea>
@@ -85,12 +89,19 @@
             <header>
                 <h1>How to convert form Celsius(&deg;C) to Fanrenheit(&deg;F)</h1>
             </header>
-            <hr>
 
-            <p>The temperature in degrees Fahrenheit(&deg;F)is the same as the temperature in degrees Celsius(&deg;C) times 9/5 plus 32</p>
+            <hr class="new2">
+
+            <p>The temperature&deg; in degrees Fahrenheit(&deg;F)is the same as the temperature&deg; in degrees Celsius(&deg;C) times 9/5 plus 32</p>
 
             <p>
                 <span class="subject-info">S</span><sub>(&deg;F)</sub> = (<span class="subject-info">S</span><sub>(&deg;C)</sub> x 9/5) + 32
+            </p>
+
+            <p>atau</p>
+
+            <p>
+                <span class="subject-info">S</span><sub>(&deg;C)</sub> = (<span class="subject-info">S</span><sub>(&deg;F)</sub> - 32 ) x 5/9
             </p>
          </section>
 
@@ -103,6 +114,6 @@
 
 
 <!-- link untuk javascript -->
-    <script src="js/scirpt.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

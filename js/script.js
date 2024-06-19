@@ -1,36 +1,50 @@
 // ini javascript
 
-const temperatureInput = document.getElementById('temperature-input');
-const conversionType = document.getElementById('conversion-type');
-const temperatureOutput = document.getElementById('temperature-output');
-const calculation = document.getElementById('calculation');
-const textarea = document.getElementById('temperature-input');
+// Untuk mengaktifkan tombol conversion
+function conversion(){
+    var inputTemp = parseFloat(document.getElementById('inputTemp').value);
 
-// ketika di enter tampil hasilnya
-if(keyCode === 13) {
-    event.preventDefault();
-    countConversion();
-    showCalc();
+    var fahrenheit = (inputTemp * 9/5) + 32;
+
+    var resultFahrenheit = document.getElementById('resultFahrenheit');
+    resultFahrenheit.innerHTML = `${fahrenheit.toFixed(2)}`;
+
+    var resultCalculate = document.getElementById('resultCalculate');
+    resultCalculate.innerHTML = `
+Fahrenheit :
+(${inputTemp.toFixed(2)}&degC * 9/5) + 32 = ${fahrenheit.toFixed(2)}&degF
+    `;
 }
-
-// untuk input otomatis
-function conversion() {
-    countConversion();
-    showCalc();
+// Untuk mengaktifkan tombol reset
+function resetTemp(){
+    document.getElementById('inputTemp').value = '';
+    document.getElementById('resultFahrenheit').innerHTML = '';
+    document.getElementById('resultCalculate').innerHTML = '';
 }
+// Untuk mengaktifkan tombol reverse
+function reverseConversion() {
+    var resultCalculate = document.getElementById('resultCalculate');
+    var inResult = resultCalculate.innerHTML;
 
-// Fungsi untuk membalikkan selection conversion
-
-function conversionType() {
-    const selectedOption = conversionType.value;
-    let reversedOption;
-
-    switch(selectedOption) {
-        case 'celcius-to-fahrenheit':
-            reversedOption = 'fahrenheit-to-celicus';
-            break;
-         case 'fahrenheit-to-celicus':
-            reversedOption = 'celcius-to-fahrenheit';
-            break;
+    if (inResult.includes('Fahrenheit')) {
+        var celsius = parseFloat(document.getElementById('inputTemp').value);
+        var fahrenheit = parseFloat(document.getElementById('resultFahrenheit').value);
+        resultCalculate.innerHTML = `
+Celsius :
+(${fahrenheit.toFixed(2)} °F - 32) * 5/9 = ${celsius.toFixed(2)} °C
+        `;
+    } else if (inResult.includes('Celsius')) {
+        var celsius = parseFloat(document.getElementById('inputTemp').value);
+        var fahrenheit = parseFloat(document.getElementById('resultFahrenheit').value);
+        resultCalculate.innerHTML = `
+Fahrenheit :
+(${celsius.toFixed(2)} °C * 9/5) + 32 = ${fahrenheit.toFixed(2)} °F `;
     }
 }
+
+//  if (isNaN(resultFahrenheit)) {
+//      resultFahrenheit.value = "input angka tidak terdeteksi";
+//  } else {
+//      resultFahrenheit.value = resultFahrenheit.toFixed(2)
+// }
+

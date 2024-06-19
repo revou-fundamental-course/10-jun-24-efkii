@@ -20,6 +20,11 @@ body{
     font-family: math;
 }
 
+.rumus-info{
+  color: #0e0816;
+  font-size: 24px;
+}
+
 /* textarea style */
 
 textarea {
@@ -30,11 +35,12 @@ textarea {
     background-color: #f8f8f8;
     font-size: 35px;
     font-family: math;
+    cursor: pointer;
 }
 
     /* button style */
 
-button{
+ button{
     display: inline-block;
   padding: 7px 12px;
   font-family: 'Times New Roman', Times, serif;
@@ -57,7 +63,7 @@ button:active{
     background-color: #3494e6;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
-}
+} */
 
 /* Select Type */
 
@@ -81,4 +87,15 @@ select {
   }
   hr.new2{
     border: 1px solid #0e0816;
+  }
+
+  /* Temperature Info */
+  
+  .temperature-info{
+    color: #0e0816;
+    font-size: 24px;
+  }
+
+  .how-to-convert{
+    color: #0e0816;
   }

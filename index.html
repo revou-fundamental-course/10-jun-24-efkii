@@ -6,10 +6,6 @@
     <title>Converter Suhu</title> 
     <!-- link untuk css -->
     <link rel="stylesheet" href="css/style.css">
-    
-    <style>
-        
-    </style>
 
 </head>
 
@@ -26,94 +22,69 @@
 
         <p style="font-size: 20px;">On this website you can convert from Celsius(&deg;C) to Fanrenheit(&deg;F) and vice versa, Enter the temperature in degrees below, then click the convert button to get the conversion results. </p>
 
-        <!-- Section Temperatuere Input -->
-        <section class="Temperatuere Input">
+         <!-- Section Celcius -->
 
-            <label for="temperature-input">Temperature Input:</label>
+            <label>Celsius(&deg;C):</label>
             
             <section>
-                <textarea type="text"></textarea>
-            </section>
-
-        </section>
-
-         <!-- Section Conversion Type -->
-            <section class="conversion type">
+                <textarea type="text" id="inputTemp"></textarea>
+             </section>          
     
-                <label for="conversion-type"> Selection Conversion:</label>
+         <!-- Button Temperature Converter -->
+                 <label>Select Button:</label>    
+                <br/>  
+
                 <br/>
-                <label class="select">
-                    <select>
-                        <option value="temperature-select">Temperatuere Select</option>
-                        <option value="celcius-to-fahrenheit">Celcius to Fahrenheit</option>
-                        <option value="fahrenheit-to-celicus">Fahrenheit to Celcius</option>
-                     </select>
-                </label>
-                
-    
-                 <!-- Button Temperature Converter -->
-    
+                 <button onclick="reverseConversion()">Reverse</button>
+                 <button onclick="resetTemp()">Reset</button>
                  <button onclick="conversion()">Conversion</button>
-                 <button onclick="reset()">Reset</button>
-                 <button onclick="reverse()">Reverse</button>
-    
-            </section>
 
-            <!-- Section Results Conversion -->
+                 <br/>
+                 
+         <!-- Section Fahrenheit -->
 
-        <section class="results conversion">
-            <label for="temperature-output"> Temperature output:</label>
+        <section id="fahrenheit">
             <br/>
-            <textarea type="text" id="temperature-output" readonly></textarea>
+            <label>Fahrenheit(&deg;F):</label>
+            <br/>
+            <textarea type="text" id="resultFahrenheit" disabled></textarea>
         </section>
 
-        <!-- Section Results Conversion -->
+         <!-- Section Calculation -->
 
-        <section class="temperature output">
-            <label for="temperature-output"> Temperature output:</label>
+        <section id="calculation">
+            <label>Calculation Method:</label>
             <br/>
-            <textarea type="text" id="temperature-output" readonly></textarea>
+            <textarea id="resultCalculate" disabled></textarea>
         </section>
 
-        <!-- Section Calculation -->
-
-        <section class="calculation">
-            <label for="calculation">Calculation Method:</label>
-            <br/>
-            <textarea id="calculation" readonly></textarea>
-        </section>
-
-        <!-- Section Formula/Info -->
+          <!-- Section Formula/Info -->
 
          <section>
             <header>
-                <h1>How to convert form Celsius(&deg;C) to Fanrenheit(&deg;F)</h1>
+                <h1 class="how-to-convert">How to convert form Celsius(&deg;C) to Fanrenheit(&deg;F)</h1>
             </header>
 
             <hr class="new2">
 
-            <p>The temperature&deg; in degrees Fahrenheit(&deg;F)is the same as the temperature&deg; in degrees Celsius(&deg;C) times 9/5 plus 32</p>
-
             <p>
+                <span class="temperature-info">The temperature&deg; in degrees Fahrenheit(&deg;F)is the same as the temperature&deg; in degrees Celsius(&deg;C) times 9/5 plus 32</span> 
+            </p>
+
+            <p class="rumus-info">
                 <span class="subject-info">S</span><sub>(&deg;F)</sub> = (<span class="subject-info">S</span><sub>(&deg;C)</sub> x 9/5) + 32
             </p>
 
-            <p>atau</p>
+            <p class="rumus-info">atau</p>
 
-            <p>
+            <p class="rumus-info">
                 <span class="subject-info">S</span><sub>(&deg;C)</sub> = (<span class="subject-info">S</span><sub>(&deg;F)</sub> - 32 ) x 5/9
             </p>
          </section>
 
     </main>
 
-
-
-
-
-
-
-<!-- link untuk javascript -->
-    <script src="js/script.js"></script>
+         <!-- link untuk javascript -->
+    <script src="./js/script.js"></script>
 </body>
 </html>

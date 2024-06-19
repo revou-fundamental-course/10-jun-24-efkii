@@ -6,7 +6,6 @@
     <title>Converter Suhu</title> 
     <!-- link untuk css -->
     <link rel="stylesheet" href="css/style.css">
-
 </head>
 
 <body>
@@ -24,45 +23,38 @@
 
          <!-- Section Celcius -->
 
-            <label>Celsius(&deg;C):</label>
+            <label>Celsius&deg;C:</label>
             
-            <section>
-                <textarea type="text" id="inputTemp"></textarea>
+            <section id="celcius">
+                <textarea type="text" id="inputCelcius"></textarea><br/>
+                 <a><button id="convertButton">Conversion</button></a> 
              </section>          
-    
-         <!-- Button Temperature Converter -->
-                 <label>Select Button:</label>    
-                <br/>  
-
-                <br/>
-                 <button onclick="reverseConversion()">Reverse</button>
-                 <button onclick="resetTemp()">Reset</button>
-                 <button onclick="conversion()">Conversion</button>
-
-                 <br/>
-                 
+             
          <!-- Section Fahrenheit -->
 
         <section id="fahrenheit">
             <br/>
-            <label>Fahrenheit(&deg;F):</label>
+            <label>Fahrenheit&deg;F:</label>
             <br/>
-            <textarea type="text" id="resultFahrenheit" disabled></textarea>
+            <textarea type="text" id="inputFahrenheit" readonly></textarea><br/>
+            <button id="reverseButton">Reverse</button>
+            <button id="resetButton">Reset</button><br/>
         </section>
 
          <!-- Section Calculation -->
 
-        <section id="calculation">
+        <section id="calculation"><br/>
             <label>Calculation Method:</label>
             <br/>
-            <textarea id="resultCalculate" disabled></textarea>
+            <textarea class="result-Calculation" readonly></textarea>
         </section>
 
           <!-- Section Formula/Info -->
 
+          <!-- Section Formula Celsius -->
          <section>
             <header>
-                <h1 class="how-to-convert">How to convert form Celsius(&deg;C) to Fanrenheit(&deg;F)</h1>
+                <h2 class="how-to-convert">How to convert form Celsius(&deg;C) to Fanrenheit(&deg;F)</h2>
             </header>
 
             <hr class="new2">
@@ -78,13 +70,40 @@
             <p class="rumus-info">atau</p>
 
             <p class="rumus-info">
+                <span class="subject-info">S</span><sub>(&deg;F)</sub> = (<span class="subject-info">S</span><sub>(&deg;C)</sub> x 1.8) + 32
+            </p>
+
+            <!-- Section Formula Fahrenheit -->
+            <hr class="new2">
+
+            <h2 class="how-to-convert">How to convert form Fahrenheit(&deg;F) to Celcius(&deg;C)</h2>
+            <p>
+                <span class="temperature-info">The temperature&deg; in degrees Celsius(&deg;C)is the same as the temperature&deg; in degrees Fahrenheit(&deg;F) mines 32 times 5/9</span> 
+            </p>
+
+            <p class="rumus-info">
                 <span class="subject-info">S</span><sub>(&deg;C)</sub> = (<span class="subject-info">S</span><sub>(&deg;F)</sub> - 32 ) x 5/9
             </p>
+
+            <hr class="new2">
+
+            <!-- Section Article -->
+
+            <h2 class="article">What Is Celsius?</h2>
+            <p class="article">Celsius is a scale for measuring temperature, in which water freezes at 0 degrees and boils at 100 degrees. It is represented by the symbol ° C.
+                Highest temperatures 11° Celsius, that's 52° Fahrenheit.</p>
+
+                <h2 class="article">What Is Fahrenheit?</h2>
+                <p class="article">The Fahrenheit scale is a temperature scale based on one proposed in 1724 by the European physicist Daniel Gabriel Fahrenheit (1686–1736).It uses the degree Fahrenheit (symbol: °F) as the unit.</p>
+
+                <hr class="new2">
+
+                <p style="text-align: center;" class="article">Created by Faishal Khalid Ahmad/efkii</p>
          </section>
 
     </main>
 
-         <!-- link untuk javascript -->
+        <!-- link untuk javascript -->
     <script src="./js/script.js"></script>
 </body>
 </html>

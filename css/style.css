@@ -63,7 +63,7 @@ button:active{
     background-color: #3494e6;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
-} */
+}
 
 /* Select Type */
 
@@ -97,5 +97,10 @@ select {
   }
 
   .how-to-convert{
+    color: #0e0816;
+  }
+
+  /* article */
+  .article {
     color: #0e0816;
   }
